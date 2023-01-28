@@ -9,7 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1em;
   line-height: 1.5;
-  color: rgb(0, 0, 0);
   margin: 0;
 }
 
@@ -20,6 +19,8 @@ a {
 p {
   margin: 0;
 }
+
+// ------------------------------------------------------------------
 
 .search-container {
   width: 100%;
@@ -65,7 +66,6 @@ p {
 .search-form button:hover,
 .search-form button:focus {
   background-color: rgb(157, 215, 222);
-  // border-left: 1px solid rgb(0, 0, 0);
   box-shadow: inset 1px 1px 6px 0px rgb(38, 129, 149);
 }
 
@@ -111,9 +111,13 @@ p {
   min-width: 320px;
   flex-basis: calc((100% - 80px) / 4);
   border: 2px solid #608c0d9a;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
   transition: all 0.3s;
+
+  @media (max-width: 320px) {
+    min-width: 310px;
+  }
 }
 
 .gallery__link:hover,
@@ -137,6 +141,7 @@ p {
 .info {
   padding: 10px;
   justify-content: space-around;
+  background: rgba(178, 216, 225, 0.529);
 }
 
 .info-item {
@@ -187,7 +192,7 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #fdfdfd;
+  background: rgba(178, 216, 225, 0.752);
   color: rgb(0, 0, 0);
   cursor: pointer;
   opacity: 0;
